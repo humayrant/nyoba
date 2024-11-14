@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: hotpink;
+}
+
+::selection{
+    color: aliceblue;
+    background-color: hotpink;
+}
+
+.info_box {
+    width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.info_box .info-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.info_box .info-list .info {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info_box .info-list .info span {
+    color: red;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.buttons .restart {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .restart:hover {
+    background-color: #ff69b4;
+}
+
+/* Styling Quiz Box */
+.quiz_box {
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Awalnya tersembunyi */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.quiz_box .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.quiz_box .timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.quiz_box .timer .time_left_txt {
+    color: #333;
+}
+
+.quiz_box .timer .timer_sec {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.quiz_box .time_line {
+    height: 5px;
+    background-color: #ff69b4;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.quiz_box .que_text {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.quiz_box .option_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz_box .option_list .option {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quiz_box .option_list .option:hover {
+    background-color: #ffebf2;
+}
+
+.quiz_box .option_list .option.correct {
+    background-color: #a5d6a7; 
+    color: #333;
+}
+
+.option.incorrect {
+    background-color: #f30317;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.option.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.quiz_box footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz_box footer .next_btn {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz_box footer .next_btn:hover {
+    background-color: #ff5fa0;
+}
+
+@media (max-width: 500px) {
+    .quiz_box {
+        width: 90%;
+    }
+}
+
+
+/* Styling Result Box */
+.result_box {
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Awalnya tersembunyi */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+}
+
+.result_box .complete_text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.result_box .score_text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.result_box .button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.result_box .button .restart,
+.result_box .button .quit {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result_box .button .restart:hover,
+.result_box .button .quit:hover {
+    background-color: #ff5fa0;
+}

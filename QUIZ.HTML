@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quizME! | Kelompok 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Rules at quizME!</span></div>
+        <div class="info-list">
+            <div class="info">1. Kamu hanya memiliki waktu <span>15 detik</span> setiap pertanyaan.</div>
+            <div class="info">2. Setelah memilih jawaban, jawaban tidak dapat diganti.</div>
+            <div class="info">3. Kamu akan mengetahui jumlah jawaban benar kamu.</div>
+        </div>
+        <div class="buttons">
+            <button class="restart">continue</button>
+        </div>
+    </div>
+    
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">quizME!</div>
+            <div class="timer">
+                <div class="time_left_txt">Waktu Tersisa</div>
+                <div class="timer_sec">10</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+
+        <section>
+            <div class="que_text">
+                <!-- Pertanyaan akan dimasukkan dari JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Opsi akan dimasukkan dari JavaScript -->
+            </div>
+        </section>
+
+        <footer>
+            <div class="total_que">
+                <!-- Di sini akan muncul jumlah pertanyaan dari JavaScript -->
+            </div>
+            <button class="next_btn">Next</button>
+        </footer>
+    </div>
+    
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="complete_text">Anda telah menyelesaikan quizME!</div>
+        <div class="score_text">
+            <!-- Skor akhir akan muncul di sini dari JavaScript -->
+        </div>
+        <div class="button">
+            <button class="restart">Ulangi</button>
+            <button class="quit">Keluar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
